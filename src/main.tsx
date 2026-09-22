@@ -1,16 +1,19 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import { HashRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import AppShell from './AppShell.tsx'
+import Content from './components/Content.tsx'
 
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <HashRouter>
+    <BrowserRouter>
       <Routes>
-        <Route path='/' element={<AppShell/>}/>
+        <Route element={<AppShell />}>
+          <Route path='/' element={ <Content /> } />
+        </Route>
       </Routes>
-    </HashRouter>
+    </BrowserRouter>
   </StrictMode>
 )

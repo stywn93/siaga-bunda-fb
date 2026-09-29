@@ -9,8 +9,8 @@ function Content(){
         </div>
         
         <div className="p-4">
-                <div className="p-4 border-1 border-default border-dashed rounded-base">
-                    <div className="grid grid-cols-3 gap-2 mb-4">
+                <div className="p-4 border border-default border-dashed rounded-base">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 mb-4">
                         <MomProfile color="#b91c1c" risk="high"/>
                         <MomProfile />
                         <MomProfile />

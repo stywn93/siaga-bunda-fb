@@ -1,8 +1,13 @@
 import MomProfile from "./MomProfile"
+import SearchBar from "./SearchBar"
 
 function Content(){
     return(
         <>
+        <div className="mt-4">
+            <SearchBar/>
+        </div>
+        
         <div className="p-4">
                 <div className="p-4 border-1 border-default border-dashed rounded-base">
                     <div className="grid grid-cols-3 gap-2 mb-4">

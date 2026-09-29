@@ -4,7 +4,7 @@ import SearchBar from "./SearchBar"
 function Content(){
     return(
         <>
-        <div className="mt-4">
+        <div className="sticky top-0 z-30 shadow bg-neutral-100 py-2">
             <SearchBar/>
         </div>
         
@@ -12,6 +12,10 @@ function Content(){
                 <div className="p-4 border-1 border-default border-dashed rounded-base">
                     <div className="grid grid-cols-3 gap-2 mb-4">
                         <MomProfile color="#b91c1c" risk="high"/>
+                        <MomProfile />
+                        <MomProfile />
+                        <MomProfile />
+                        <MomProfile />
                         <MomProfile />
                         <MomProfile />
                     </div>

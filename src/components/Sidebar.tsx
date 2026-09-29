@@ -13,7 +13,7 @@ function Sidebar() {
                 <div className="h-full px-3 py-4 overflow-y-auto bg-neutral-primary-soft border-e border-default">
                     <header className="flex items-center gap-3 px-2 pb-5">
                         <img
-                            src="/siaga-bunda-icon.png"
+                            src="./src/assets/vite.svg"
                             alt=""
                             className="h-10 w-10 shrink-0 rounded-lg object-cover"
                         />

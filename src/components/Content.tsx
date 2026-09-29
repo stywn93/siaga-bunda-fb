@@ -1,3 +1,4 @@
+import Footer from "./Footer"
 import MomProfile from "./MomProfile"
 import SearchBar from "./SearchBar"
 
@@ -12,7 +13,6 @@ function Content(){
                 <div className="p-4 border border-default border-dashed rounded-base">
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 mb-4">
                         <MomProfile color="#b91c1c" risk="high"/>
-                        <MomProfile />
                         <MomProfile />
                         <MomProfile />
                         <MomProfile />
@@ -73,8 +73,11 @@ function Content(){
                             </p>
                         </div>
                     </div> */}
-                </div>
             </div>
+        </div>
+        <div>
+            <Footer/>
+        </div>
         </>
     )
 }

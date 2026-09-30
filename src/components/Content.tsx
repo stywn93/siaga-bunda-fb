@@ -3,7 +3,7 @@ import SearchBar from "./SearchBar"
 
 function Content(){
     return(
-        <div className="flex min-h-dvh flex-col">
+        <div className="flex flex-1 flex-col">
         <div className="sticky top-0 z-30 shadow bg-neutral-100 py-2">
             <SearchBar/>
         </div>

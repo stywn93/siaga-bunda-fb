@@ -1,9 +1,9 @@
 function Footer() {
     return (
         <>
-            <footer className="fixed inset-x-0 bottom-0 z-30 m-4 bg-neutral-primary-soft rounded-base shadow-xs border border-default sm:left-64">
+            <footer className="bg-neutral-primary-soft rounded-base shadow-xs border border-default m-4 sm:ml-[17rem]">
                 <div className="w-full mx-auto max-w-7xl p-4 md:flex md:items-center md:justify-between">
-                    <span className="text-sm text-body sm:text-center">© 2023 <a href="https://dinkes.situbondokab.go.id/" className="hover:underline">Flowbite™</a>. All Rights Reserved.
+                    <span className="text-sm text-body sm:text-center">© 2026 <a href="https://dinkes.situbondokab.go.id/" className="hover:underline">Siaga Bunda™</a>. All Rights Reserved.
                     </span>
                     <ul className="flex flex-wrap items-center mt-3 text-sm font-medium text-body sm:mt-0">
                         <li>

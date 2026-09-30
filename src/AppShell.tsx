@@ -5,9 +5,9 @@ import { Outlet } from "react-router-dom"
 
 function AppShell() {
     return(
-        <div className="min-h-dvh">
+        <div className="flex min-h-dvh flex-col">
             <Sidebar />
-            <main className="min-w-0 pb-32 sm:ml-64">
+            <main className="flex min-w-0 flex-1 flex-col sm:ml-64">
                 <Outlet />
             </main>
             <Footer/>

@@ -10,3 +10,11 @@ For every new task:
 6. Wait for user testing
 
 Never skip approval gates.
+
+## Styling & Tailwind CSS Guidelines
+
+- **Utility-First**: Always implement standard Tailwind CSS utility classes first before considering custom CSS or arbitrary values.
+- **No Inline Styles**: Never use inline `style` props or `CSSProperties` objects unless strictly required for dynamic runtime values.
+- **Theme & Design Tokens**: Use Tailwind / Flowbite theme color and spacing tokens (e.g., `text-heading`, `text-body`, `bg-neutral-primary-soft`, `border-default`).
+- **Responsive & Interactive States**: Use Tailwind prefixes (`sm:`, `md:`, `hover:`, `focus:`) instead of custom media queries or JS state workarounds.
+- **Icon Consistency**: Always use installed icon packages (`lucide-react`) instead of inline SVGs.

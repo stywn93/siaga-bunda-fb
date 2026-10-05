@@ -1,4 +1,4 @@
-import { UserRound, MapPin, Form, Venus } from "lucide-react"
+import { MapPin, Form, Venus } from "lucide-react"
 import { Link } from "react-router-dom"
 type Props = {
     color?: string,
@@ -13,7 +13,7 @@ function MomProfile({ color = "#000000", risk = "normal" }: Props) {
                     <svg className="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="3" d="M6 12h.01m6 0h.01m5.99 0h.01" /></svg>
                 </button>
 
-                <div id="dropdown" className="z-10 bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-36 block hidden">
+                <div id="dropdown" className="z-10 bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-36 hidden">
                     <ul className="p-2 text-sm text-body font-medium" aria-labelledby="dropdownButton">
                         <li>
                             <a href="#" className="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded-md">Edit</a>

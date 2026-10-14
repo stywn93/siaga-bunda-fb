@@ -3,14 +3,14 @@ import SearchBar from "./SearchBar"
 
 function Content() {
     return (
-        <div className="flex flex-1 flex-col">
-            <div className="sticky top-0 z-30 border-b border-default bg-neutral-secondary-soft/95 py-3 backdrop-blur">
+        <div className="flex min-h-0 flex-1 flex-col">
+            <div className="sticky top-0 z-30 flex justify-end border-b border-default bg-neutral-secondary-soft/95 px-4 py-3 backdrop-blur sm:px-6">
                 <SearchBar />
             </div>
 
-            <div className="flex-1 p-4 sm:p-6">
-                <div className="mx-auto max-w-7xl rounded-base border border-default bg-neutral-primary-soft p-4 shadow-xs sm:p-5">
-                    <div className="mb-4 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="min-h-0 flex-1 overflow-y-auto p-4 sm:p-6">
+                <div className="mx-auto max-w-7xl">
+                    <div className="grid grid-cols-1 items-start gap-4 sm:grid-cols-2 lg:grid-cols-3">
                         <MomProfile color="#b91c1c" risk="high" />
                         <MomProfile />
                         <MomProfile />

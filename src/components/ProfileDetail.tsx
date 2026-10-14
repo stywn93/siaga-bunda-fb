@@ -25,7 +25,7 @@ export default function ProfileDetail({
     normalizedRisk.includes("sangat tinggi");
 
   return (
-    <article className="w-full max-w-2xl mx-auto bg-neutral-primary-soft border border-default rounded-base shadow-xs p-5 sm:p-6">
+    <article className="w-full max-w-2xl bg-neutral-primary-soft border border-default rounded-base shadow-xs p-5 sm:p-6">
       {/* Header Profile */}
       <header className="flex flex-col sm:flex-row items-center gap-4 pb-5 border-b border-default">
         <div className="relative flex items-center justify-center w-20 h-20 rounded-full bg-brand-softer border border-brand-subtle text-fg-brand">

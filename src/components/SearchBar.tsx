@@ -1,5 +1,6 @@
 import { Search, X } from "lucide-react"
 import { useEffect, useRef, useState } from "react"
+import { createPortal } from "react-dom"
 
 function SearchBar() {
     const [isOpen, setIsOpen] = useState(false)
@@ -40,8 +41,8 @@ function SearchBar() {
                 </div>
             </form>
 
-            {isOpen && (
-                <div className="fixed inset-0 z-50 flex items-start justify-center bg-black/30 p-4 pt-24" onMouseDown={(event) => event.target === event.currentTarget && setIsOpen(false)} role="dialog" aria-modal="true" aria-label="Search">
+            {isOpen && createPortal(
+                <div className="fixed inset-0 z-50 flex items-start justify-center bg-black/50 p-4 pt-24" onMouseDown={(event) => event.target === event.currentTarget && setIsOpen(false)} role="dialog" aria-modal="true" aria-label="Search">
                     <div className="flex w-full max-w-2xl items-center gap-2 rounded-base border border-default bg-neutral-primary-soft p-3 shadow-xl">
                         <form className="w-full" onSubmit={(event) => event.preventDefault()}>
                             <label htmlFor="modal-search" className="sr-only">Cari Ibu</label>
@@ -54,7 +55,8 @@ function SearchBar() {
                             Esc
                         </button>
                     </div>
-                </div>
+                </div>,
+                document.body,
             )}
         </>
     )

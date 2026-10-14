@@ -1,50 +1,41 @@
+import { LayoutDashboard, Menu, Users } from "lucide-react"
+
 function Sidebar() {
     return (
         <aside>
-            <header className="flex items-center gap-3 px-3 py-3 sm:hidden">
-                <button data-drawer-target="default-sidebar" data-drawer-toggle="default-sidebar" aria-controls="default-sidebar" type="button" className="text-heading bg-transparent box-border border border-transparent hover:bg-neutral-secondary-medium focus:ring-4 focus:ring-neutral-tertiary font-medium leading-5 rounded-base text-sm p-2 focus:outline-none inline-flex">
-                    <span className="sr-only">Open sidebar</span>
-                    <svg className="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                        <path stroke="currentColor" strokeLinecap="round" strokeWidth="2" d="M5 7h14M5 12h14M5 17h10" />
-                    </svg>
+            <header className="flex items-center gap-3 border-b border-default bg-neutral-primary-soft px-3 py-3 sm:hidden">
+                <button type="button" className="inline-flex rounded-base border border-default p-2 text-body hover:bg-neutral-secondary-soft focus:outline-none focus:ring-4 focus:ring-brand-medium" aria-label="Buka menu">
+                    <Menu className="h-5 w-5" />
                 </button>
-                <img
-                    src="./src/assets/vite.svg"
-                    alt=""
-                    className="h-8 w-8 rounded-lg object-cover"
-                />
-                <span className="text-lg font-semibold text-heading">Siaga Bunda</span>
+                <img src="/siaga-bunda-icon.png" alt="" className="h-8 w-8 rounded-base object-cover" />
+                <span className="text-lg font-semibold tracking-tight text-heading">Siaga Bunda</span>
             </header>
 
-            <div id="default-sidebar" className="fixed top-0 left-0 z-40 w-64 h-full transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
-                <div className="h-full px-3 py-4 overflow-y-auto bg-neutral-primary-soft border-e border-default">
-                    <header className="flex items-center gap-3 px-2 pb-5">
-                        <img
-                            src="./src/assets/vite.svg"
-                            alt=""
-                            className="h-10 w-10 shrink-0 rounded-lg object-cover"
-                        />
-                        <span className="text-lg font-semibold text-heading">Siaga Bunda</span>
+            <div id="default-sidebar" className="fixed top-0 left-0 z-40 h-full w-64 -translate-x-full border-e border-default bg-neutral-primary-soft transition-transform sm:translate-x-0" aria-label="Sidebar">
+                <div className="flex h-full flex-col overflow-y-auto px-3 py-4">
+                    <header className="flex items-center gap-3 border-b border-default px-2 pb-5">
+                        <img src="/siaga-bunda-icon.png" alt="" className="h-10 w-10 shrink-0 rounded-base object-cover" />
+                        <span className="text-lg font-semibold tracking-tight text-heading">Siaga Bunda</span>
                     </header>
-                    <ul className="space-y-2 font-medium">
+                    <ul className="space-y-1 pt-5 font-medium">
                         <li>
-                            <a href="#" className="flex items-center px-2 py-1.5 text-body rounded-base hover:bg-neutral-tertiary hover:text-fg-brand group">
-                                <svg className="w-5 h-5 transition duration-75 group-hover:text-fg-brand" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6.025A7.5 7.5 0 1 0 17.975 14H10V6.025Z" /><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13.5 3c-.169 0-.334.014-.5.025V11h7.975c.011-.166.025-.331.025-.5A7.5 7.5 0 0 0 13.5 3Z" /></svg>
-                                <span className="ms-3 line-through">Dashboard</span>
+                            <a href="#" className="group flex items-center gap-3 rounded-base bg-brand-softer px-3 py-2.5 text-sm font-medium text-fg-brand">
+                                <LayoutDashboard className="h-5 w-5" />
+                                <span>Dashboard</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#" className="flex items-center px-2 py-1.5 text-body rounded-base hover:bg-neutral-tertiary hover:text-fg-brand group">
-                                <svg className="shrink-0 w-5 h-5 transition duration-75 group-hover:text-fg-brand" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 5v14M9 5v14M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Z" /></svg>
-                                <span className="flex-1 ms-3 whitespace-nowrap">Profil Ibu</span>
-                                <span className="bg-neutral-secondary-medium border border-default-medium text-heading text-xs font-medium px-1.5 py-0.5 rounded-sm">Pro</span>
+                            <a href="#" className="group flex items-center gap-3 rounded-base px-3 py-2.5 text-sm font-medium text-body hover:bg-neutral-secondary-soft hover:text-heading">
+                                <Users className="h-5 w-5 transition-colors group-hover:text-fg-brand" />
+                                <span className="flex-1">Profil Ibu</span>
+                                <span className="rounded-sm border border-default-medium bg-neutral-secondary-medium px-1.5 py-0.5 text-xs font-medium text-heading">Pro</span>
                             </a>
                         </li>
                     </ul>
                 </div>
             </div>
-
         </aside>
     )
 }
+
 export default Sidebar

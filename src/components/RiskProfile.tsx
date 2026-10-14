@@ -1,4 +1,4 @@
-import MomProfile from "./MomProfile"
+
 import ProfileDetail from "./ProfileDetail"
 import SearchBar from "./SearchBar"
 

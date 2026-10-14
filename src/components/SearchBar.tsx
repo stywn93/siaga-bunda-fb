@@ -1,3 +1,4 @@
+import { Search, X } from "lucide-react"
 import { useEffect, useRef, useState } from "react"
 
 function SearchBar() {
@@ -28,32 +29,35 @@ function SearchBar() {
 
     return (
         <>
-            <form className="max-w-md mx-auto shadow" onClick={() => setIsOpen(true)}>
-                <label htmlFor="search" className="block mb-2.5 text-sm font-medium text-heading sr-only ">Search</label>
+            <form className="mx-auto max-w-md" onClick={() => setIsOpen(true)}>
+                <label htmlFor="search" className="sr-only">Cari Ibu</label>
                 <div className="relative">
-                    <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-                        <svg className="w-4 h-4 text-body" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-width="2" d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z" /></svg>
+                    <div className="pointer-events-none absolute inset-y-0 start-0 flex items-center ps-3 text-body">
+                        <Search className="h-4 w-4" />
                     </div>
-                    <input type="search" id="search" className="block w-full p-3 pe-20 ps-9 border border-default-medium text-heading text-sm rounded-base focus:ring-brand shadow-xs placeholder:text-body" placeholder="Cari Ibu..." required />
-                    <kbd className="pointer-events-none absolute end-1.5 bottom-2.5 rounded border border-default-medium px-1.5 py-0.5 text-xs text-body" aria-label={shortcutLabel}>{shortcutLabel}</kbd>
+                    <input type="search" id="search" className="block w-full rounded-base border border-default bg-neutral-primary-soft p-3 pe-20 ps-9 text-sm text-heading shadow-xs outline-none placeholder:text-body focus:border-brand focus:ring-4 focus:ring-brand-medium" placeholder="Cari Ibu..." required />
+                    <kbd className="pointer-events-none absolute end-1.5 bottom-2.5 rounded-sm border border-default-medium bg-neutral-secondary-soft px-1.5 py-0.5 text-xs text-body" aria-label={shortcutLabel}>{shortcutLabel}</kbd>
                 </div>
             </form>
 
             {isOpen && (
-                <div className="fixed inset-0 z-50 flex items-start justify-center bg-black/50 p-4 pt-24" onMouseDown={(event) => event.target === event.currentTarget && setIsOpen(false)} role="dialog" aria-modal="true" aria-label="Search">
-                    <div className="flex w-full max-w-2xl items-center gap-2 rounded-base bg-neutral-primary-soft p-3 shadow-xl">
+                <div className="fixed inset-0 z-50 flex items-start justify-center bg-black/30 p-4 pt-24" onMouseDown={(event) => event.target === event.currentTarget && setIsOpen(false)} role="dialog" aria-modal="true" aria-label="Search">
+                    <div className="flex w-full max-w-2xl items-center gap-2 rounded-base border border-default bg-neutral-primary-soft p-3 shadow-xl">
                         <form className="w-full" onSubmit={(event) => event.preventDefault()}>
                             <label htmlFor="modal-search" className="sr-only">Cari Ibu</label>
                             <div className="relative">
-                                <input ref={inputRef} type="search" id="modal-search" className="block w-full p-3 bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand shadow-xs placeholder:text-body" placeholder="Cari Ibu..." autoComplete="off" required />
+                                <input ref={inputRef} type="search" id="modal-search" className="block w-full rounded-base border border-default-medium bg-neutral-secondary-soft p-3 text-sm text-heading outline-none placeholder:text-body focus:border-brand focus:ring-4 focus:ring-brand-medium" placeholder="Cari Ibu..." autoComplete="off" required />
                             </div>
                         </form>
-                        <button type="button" onClick={() => setIsOpen(false)} className="shrink-0 rounded-base px-3 py-2 text-sm text-body hover:bg-neutral-secondary-medium focus:outline-none focus:ring-4 focus:ring-neutral-tertiary" aria-label="Close search">Esc</button>
+                        <button type="button" onClick={() => setIsOpen(false)} className="inline-flex shrink-0 items-center gap-1.5 rounded-base px-3 py-2 text-sm text-body hover:bg-neutral-secondary-soft hover:text-heading focus:outline-none focus:ring-4 focus:ring-neutral-tertiary" aria-label="Close search">
+                            <X className="h-4 w-4" />
+                            Esc
+                        </button>
                     </div>
                 </div>
             )}
-
         </>
     )
 }
+
 export default SearchBar

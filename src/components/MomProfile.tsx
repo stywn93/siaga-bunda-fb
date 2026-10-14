@@ -1,58 +1,53 @@
-import { MapPin, Form, Venus } from "lucide-react"
+import { Form, MapPin, MoreHorizontal, ShieldAlert, ShieldCheck, Venus } from "lucide-react"
 import { Link } from "react-router-dom"
+
 type Props = {
-    color?: string,
+    color?: string
     risk?: string
 }
+
 function MomProfile({ color = "#000000", risk = "normal" }: Props) {
+    const isHighRisk = risk === "high"
+
     return (
-        <>
-            <div className="relative min-w-0 w-full max-w-sm bg-neutral-primary-soft p-2 sm:p-4 border border-default rounded-base shadow-xs">
-                <button id="dropdownButton" data-dropdown-toggle="dropdown" className="absolute top-2 end-2 text-body hover:text-heading bg-neutral-primary-soft box-border border border-transparent hover:bg-neutral-tertiary focus:ring-4 focus:ring-neutral-tertiary rounded-base p-1.5 focus:outline-none" type="button">
-                    <span className="sr-only">Open dropdown</span>
-                    <svg className="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="3" d="M6 12h.01m6 0h.01m5.99 0h.01" /></svg>
-                </button>
+        <div className="relative min-w-0 w-full max-w-sm rounded-base border border-default bg-neutral-primary-soft p-4 shadow-xs transition-shadow hover:shadow-md">
+            <button id="dropdownButton" data-dropdown-toggle="dropdown" className="absolute end-3 top-3 inline-flex rounded-base border border-transparent p-1.5 text-body hover:bg-neutral-secondary-soft hover:text-heading focus:outline-none focus:ring-4 focus:ring-brand-medium" type="button">
+                <span className="sr-only">Open dropdown</span>
+                <MoreHorizontal className="h-5 w-5" />
+            </button>
 
-                <div id="dropdown" className="z-10 bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-36 hidden">
-                    <ul className="p-2 text-sm text-body font-medium" aria-labelledby="dropdownButton">
-                        <li>
-                            <a href="#" className="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded-md">Edit</a>
-                        </li>
-                        <li>
-                            <a href="#" className="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded-md">Export Data</a>
-                        </li>
-                        <li>
-                            <a href="#" className="inline-flex items-center w-full p-2 text-fg-danger hover:bg-neutral-tertiary-medium rounded-md">Delete</a>
-                        </li>
-                    </ul>
-                </div>
-                <div className="flex flex-col items-center text-center">
-                    <Venus className="w-20 h-20 mb-4 sm:w-24 sm:h-24 sm:mb-6 rounded-full" color={color} />
-
-                    <span className={`inline-flex items-center ${risk === "high" ? "bg-danger-softer" : "bg-brand-softer"} border ${risk === "high" ? "border-danger-subtle" : "border-brand-subtle"} ${risk === "high" ? "text-dg-danger-strong" : "text-dg-brand-strong"} text-xs font-medium px-1.5 py-0.5 rounded-sm`}>
-                        <svg className="w-3 h-3 me-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.122 17.645a7.185 7.185 0 0 1-2.656 2.495 7.06 7.06 0 0 1-3.52.853 6.617 6.617 0 0 1-3.306-.718 6.73 6.73 0 0 1-2.54-2.266c-2.672-4.57.287-8.846.887-9.668A4.448 4.448 0 0 0 8.07 6.31 4.49 4.49 0 0 0 7.997 4c1.284.965 6.43 3.258 5.525 10.631 1.496-1.136 2.7-3.046 2.846-6.216 1.43 1.061 3.985 5.462 1.754 9.23Z" /></svg>
-                        {risk === "high" ? "Resiko Tinggi" : "Normal"}
-                    </span>
-                    {/* <img className="w-24 h-24 mb-6 rounded-full" src="/docs/images/people/profile-picture-3.jpg" alt="Bonnie image" /> */}
-                    <h5 className="mb-0.5 text-xl font-semibold tracking-tight text-heading">Ibu Fulanah</h5>
-                    <span className="text-sm text-body">35 minggu</span>
-                    <p className="text-body inline-flex items-center justify-center gap-1">
-                        <MapPin className="w-4 h-4" />
-                        <span>Curah Jeru, Panji.</span>
-                    </p>
-                    <div className="flex w-full flex-col mt-4 gap-2 sm:mt-6 sm:w-auto sm:flex-row sm:gap-4">
-                        <Link to={'/mother/1'} type="button" className="inline-flex w-full items-center justify-center text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none sm:w-auto">
-                            <Form className="size-3.5 mr-1.5" />
-                            Lihat Profil Risiko
-                        </Link>
-                        <button type="button" className="inline-flex w-full items-center justify-center text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-neutral-tertiary shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none sm:w-auto">
-                            Ikuti Perjalanan
-                        </button>
-                    </div>
-                </div>
+            <div id="dropdown" className="z-10 hidden w-36 rounded-base border border-default-medium bg-neutral-primary-medium shadow-lg">
+                <ul className="p-2 text-sm font-medium text-body" aria-labelledby="dropdownButton">
+                    <li><a href="#" className="inline-flex w-full items-center rounded-base p-2 hover:bg-neutral-tertiary-medium hover:text-heading">Edit</a></li>
+                    <li><a href="#" className="inline-flex w-full items-center rounded-base p-2 hover:bg-neutral-tertiary-medium hover:text-heading">Export Data</a></li>
+                    <li><a href="#" className="inline-flex w-full items-center rounded-base p-2 text-fg-danger hover:bg-neutral-tertiary-medium">Delete</a></li>
+                </ul>
             </div>
 
-        </>
+            <div className="flex flex-col items-center text-center">
+                <Venus className="mb-4 h-20 w-20 rounded-full sm:mb-5 sm:h-24 sm:w-24" color={color} />
+
+                <span className={`inline-flex items-center gap-1 rounded-sm border px-2 py-0.5 text-xs font-medium ${isHighRisk ? "border-danger-subtle bg-danger-softer text-fg-danger" : "border-brand-subtle bg-brand-softer text-fg-brand"}`}>
+                    {isHighRisk ? <ShieldAlert className="h-3.5 w-3.5" /> : <ShieldCheck className="h-3.5 w-3.5" />}
+                    {isHighRisk ? "Resiko Tinggi" : "Normal"}
+                </span>
+                <h5 className="mb-0.5 mt-3 text-xl font-semibold tracking-tight text-heading">Ibu Fulanah</h5>
+                <span className="text-sm text-body">35 minggu</span>
+                <p className="inline-flex items-center justify-center gap-1 text-sm text-body">
+                    <MapPin className="h-4 w-4" />
+                    <span>Curah Jeru, Panji.</span>
+                </p>
+                <div className="mt-4 flex w-full flex-col gap-2 sm:mt-5 sm:w-auto sm:flex-row sm:gap-3">
+                    <Link to="/mother/1" className="inline-flex w-full items-center justify-center rounded-base border border-transparent bg-brand px-4 py-2.5 text-sm font-medium leading-5 text-white shadow-xs hover:bg-brand-strong focus:outline-none focus:ring-4 focus:ring-brand-medium sm:w-auto">
+                        <Form className="mr-1.5 h-3.5 w-3.5" />
+                        Lihat Profil Risiko
+                    </Link>
+                    <button type="button" className="inline-flex w-full items-center justify-center rounded-base border border-default-medium bg-neutral-secondary-medium px-4 py-2.5 text-sm font-medium leading-5 text-body shadow-xs hover:bg-neutral-tertiary-medium hover:text-heading focus:outline-none focus:ring-4 focus:ring-neutral-tertiary sm:w-auto">
+                        Ikuti Perjalanan
+                    </button>
+                </div>
+            </div>
+        </div>
     )
 }
 

@@ -1,28 +1,17 @@
 function Footer() {
     return (
-        <>
-            <footer className="bg-neutral-primary-soft rounded-base shadow-xs border border-default m-4 sm:ml-[17rem]">
-                <div className="w-full mx-auto max-w-7xl p-4 md:flex md:items-center md:justify-between">
-                    <span className="text-sm text-body sm:text-center">© 2026 <a href="https://dinkes.situbondokab.go.id/" className="hover:underline">Siaga Bunda™</a>. All Rights Reserved.
-                    </span>
-                    <ul className="flex flex-wrap items-center mt-3 text-sm font-medium text-body sm:mt-0">
-                        <li>
-                            <a href="#" className="hover:underline me-4 md:me-6">About</a>
-                        </li>
-                        <li>
-                            <a href="#" className="hover:underline me-4 md:me-6">Privacy Policy</a>
-                        </li>
-                        <li>
-                            <a href="#" className="hover:underline me-4 md:me-6">Licensing</a>
-                        </li>
-                        <li>
-                            <a href="#" className="hover:underline">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-            </footer>
-
-        </>
+        <footer className="m-4 rounded-base border border-default bg-neutral-primary-soft shadow-xs sm:ml-[17rem]">
+            <div className="mx-auto flex w-full max-w-7xl flex-col gap-3 p-4 text-sm text-body sm:flex-row sm:items-center sm:justify-between">
+                <span>© 2026 <a href="https://dinkes.situbondokab.go.id/" className="font-medium text-heading hover:text-fg-brand hover:underline">Siaga Bunda™</a>. All Rights Reserved.</span>
+                <ul className="flex flex-wrap items-center gap-x-5 gap-y-2 font-medium">
+                    <li><a href="#" className="hover:text-heading hover:underline">About</a></li>
+                    <li><a href="#" className="hover:text-heading hover:underline">Privacy Policy</a></li>
+                    <li><a href="#" className="hover:text-heading hover:underline">Licensing</a></li>
+                    <li><a href="#" className="hover:text-heading hover:underline">Contact</a></li>
+                </ul>
+            </div>
+        </footer>
     )
 }
+
 export default Footer

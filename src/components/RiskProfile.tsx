@@ -12,10 +12,7 @@ export default function RiskProfile(){
         <div className="flex-1 p-4">
                 <div className="p-4 border border-default border-dashed rounded-base">
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 mb-4">
-                        <MomProfile color="#b91c1c" risk="high"/>
                         <ProfileDetail/>
-
-
                     </div>
                     <div className="flex items-center justify-center h-48 rounded-base bg-neutral-secondary-soft mb-4">
                         <p className="text-fg-disabled">

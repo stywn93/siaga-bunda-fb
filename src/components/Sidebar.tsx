@@ -23,33 +23,33 @@ function Sidebar() {
                             <p className="px-3 text-xs font-medium uppercase tracking-wider text-body">Main Menu</p>
                             <ul className="mt-3 space-y-1 font-medium">
                                 <li>
-                                    <a href="#" className="relative flex items-center gap-3 rounded-base border-s-4 border-teal-500 bg-teal-50 px-2.5 py-2.5 text-sm font-medium text-teal-600">
+                                    <a href="#" className="relative flex items-center gap-3 rounded-base border-s-4 border-brand bg-brand-softer px-2.5 py-2.5 text-sm font-medium text-fg-brand">
                                         <LayoutDashboard className="h-5 w-5" />
                                         <span>Dashboard</span>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#" className="group flex items-center gap-3 rounded-base border-s-4 border-transparent px-2.5 py-2.5 text-sm font-medium text-body hover:bg-neutral-secondary-soft hover:text-heading">
-                                        <Stethoscope className="h-5 w-5 transition-colors group-hover:text-teal-600" />
+                                        <Stethoscope className="h-5 w-5 transition-colors group-hover:text-fg-brand" />
                                         <span>Dokter</span>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#" className="group flex items-center gap-3 rounded-base border-s-4 border-transparent px-2.5 py-2.5 text-sm font-medium text-body hover:bg-neutral-secondary-soft hover:text-heading">
-                                        <Users className="h-5 w-5 transition-colors group-hover:text-teal-600" />
+                                        <Users className="h-5 w-5 transition-colors group-hover:text-fg-brand" />
                                         <span className="flex-1">Profil Ibu</span>
                                         <span className="rounded-sm border border-default-medium bg-neutral-secondary-medium px-1.5 py-0.5 text-xs font-medium text-heading">Pro</span>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#" className="group flex items-center gap-3 rounded-base border-s-4 border-transparent px-2.5 py-2.5 text-sm font-medium text-body hover:bg-neutral-secondary-soft hover:text-heading">
-                                        <CalendarDays className="h-5 w-5 transition-colors group-hover:text-teal-600" />
+                                        <CalendarDays className="h-5 w-5 transition-colors group-hover:text-fg-brand" />
                                         <span>Jadwal</span>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#" className="group flex items-center gap-3 rounded-base border-s-4 border-transparent px-2.5 py-2.5 text-sm font-medium text-body hover:bg-neutral-secondary-soft hover:text-heading">
-                                        <Building2 className="h-5 w-5 transition-colors group-hover:text-teal-600" />
+                                        <Building2 className="h-5 w-5 transition-colors group-hover:text-fg-brand" />
                                         <span>Fasilitas Kesehatan</span>
                                     </a>
                                 </li>
@@ -61,13 +61,13 @@ function Sidebar() {
                             <ul className="mt-3 space-y-1 font-medium">
                                 <li>
                                     <a href="#" className="group flex items-center gap-3 rounded-base border-s-4 border-transparent px-2.5 py-2.5 text-sm font-medium text-body hover:bg-neutral-secondary-soft hover:text-heading">
-                                        <BarChart3 className="h-5 w-5 transition-colors group-hover:text-teal-600" />
+                                        <BarChart3 className="h-5 w-5 transition-colors group-hover:text-fg-brand" />
                                         <span>Laporan</span>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#" className="group flex items-center gap-3 rounded-base border-s-4 border-transparent px-2.5 py-2.5 text-sm font-medium text-body hover:bg-neutral-secondary-soft hover:text-heading">
-                                        <Contact className="h-5 w-5 transition-colors group-hover:text-teal-600" />
+                                        <Contact className="h-5 w-5 transition-colors group-hover:text-fg-brand" />
                                         <span>Kontak</span>
                                     </a>
                                 </li>
@@ -79,19 +79,19 @@ function Sidebar() {
                             <ul className="mt-3 space-y-1 font-medium">
                                 <li>
                                     <a href="#" className="group flex items-center gap-3 rounded-base border-s-4 border-transparent px-2.5 py-2.5 text-sm font-medium text-body hover:bg-neutral-secondary-soft hover:text-heading">
-                                        <Settings className="h-5 w-5 transition-colors group-hover:text-teal-600" />
+                                        <Settings className="h-5 w-5 transition-colors group-hover:text-fg-brand" />
                                         <span>Pengaturan</span>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#" className="group flex items-center gap-3 rounded-base border-s-4 border-transparent px-2.5 py-2.5 text-sm font-medium text-body hover:bg-neutral-secondary-soft hover:text-heading">
-                                        <Puzzle className="h-5 w-5 transition-colors group-hover:text-teal-600" />
+                                        <Puzzle className="h-5 w-5 transition-colors group-hover:text-fg-brand" />
                                         <span>Integrasi</span>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#" className="group flex items-center gap-3 rounded-base border-s-4 border-transparent px-2.5 py-2.5 text-sm font-medium text-body hover:bg-neutral-secondary-soft hover:text-heading">
-                                        <CircleHelp className="h-5 w-5 transition-colors group-hover:text-teal-600" />
+                                        <CircleHelp className="h-5 w-5 transition-colors group-hover:text-fg-brand" />
                                         <span>Pusat Bantuan</span>
                                     </a>
                                 </li>

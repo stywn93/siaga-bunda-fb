@@ -4,6 +4,19 @@
 @plugin "flowbite/plugin";
 @source "../node_modules/flowbite";
 
+@theme inline {
+  --color-fg-brand-subtle: var(--color-teal-200);
+  --color-fg-brand: var(--color-teal-600);
+  --color-fg-brand-strong: var(--color-teal-700);
+  --color-brand-softer: var(--color-teal-50);
+  --color-brand-soft: var(--color-teal-100);
+  --color-brand: var(--color-teal-500);
+  --color-brand-medium: var(--color-teal-200);
+  --color-brand-strong: var(--color-teal-600);
+  --color-brand-subtle: var(--color-teal-200);
+  --color-brand-light: var(--color-teal-600);
+}
+
 @layer base {
   html {
     @apply bg-neutral-secondary-soft;
